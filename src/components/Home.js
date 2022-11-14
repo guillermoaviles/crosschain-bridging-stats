@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const Home = () => {
@@ -41,15 +42,8 @@ const Home = () => {
         })
     }
 
-    const handleSearch = (event) => {
-        setParams({
-            toTime: event.target.value
-        })
-    }
     
     console.log(params);
-    // console.log(params.destinationChain);
-    // console.log(params.asset);
 
 
     return (
@@ -110,9 +104,9 @@ const Home = () => {
                     <label>To Date:</label>
                     <input className='input' onChange={handletoTime}/>
                 </div>
-                <div>
-                    <button onClick={handleSearch}>Search</button>
-                </div>
+                <Link to = '/stats'>
+                    <h1>Statistics</h1>
+                </Link>
             </div>
         </div>
     )

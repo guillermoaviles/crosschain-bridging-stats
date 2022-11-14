@@ -5,11 +5,11 @@ import {Link} from "react-router-dom";
 const Header = () => {
     return (
         <nav>
-        <Link to="/">
+        <Link to='/'>
           <img src={icon}/>
           <h1>Bridge Stats</h1>
         </Link>
-        <Link to="/home">Home</Link>
+        <Link to='/'>Home</Link>
       </nav>
     )
 }
