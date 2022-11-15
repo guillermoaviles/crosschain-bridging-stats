@@ -2,48 +2,48 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
-const Home = () => {
-
-    const [params, setParams] = useState({
-        sourceChain: '',
-        destinationChain: '',
-        asset: '',
-        fromTime: '',
-        toTime: ''
-    });
+const Home = ({data, setData}) => {
+    
+    // const [data, setData] = useState({
+    //     sourceChain: '',
+    //     destinationChain: '',
+    //     asset: '',
+    //     fromTime: '',
+    //     toTime: ''
+    // });
 
     const handleSourceChain = (event) => {
-        setParams({
+        setData({...data,
             sourceChain: event.target.getAttribute('value')
         })
     }
 
     const handleDestinationChain = (event) => {
-        setParams({
+        setData({...data,
             destinationChain: event.target.getAttribute('value')
         })
     }
 
     const handleAsset = (event) => {
-        setParams({
+        setData({...data,
             asset: event.target.getAttribute('value')
         })
     }
 
     const handleFromTime = (event) => {
-        setParams({
+        setData({...data,
             fromTime: event.target.value
         })
     }
 
     const handletoTime = (event) => {
-        setParams({
+        setData({...data,
             toTime: event.target.value
         })
     }
 
     
-    console.log(params);
+    console.log(data);
 
 
     return (

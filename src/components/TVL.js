@@ -17,7 +17,7 @@ const TVL = ({params}) => {
     
     return (
         <div>
-            <p>Main Stats</p>
+            <p>Total Value Locked</p>
             <div className='num-txs'>Number of Transfers: {stats.num_txs}</div>
             <div className='volume'>Volume: ${stats.volume} USD</div>
         </div>

@@ -3,12 +3,12 @@ import TimeSeries from "./TimeSeries";
 import TVL from "./TVL";
 
 
-const Stats = ({params}) => {
+const Stats = ({data}) => {
     return (
         <div>
-            <MainStats/>
-            <TimeSeries/>
-            <TVL/>
+            <MainStats data = {data}/>
+            <TimeSeries data = {data}/>
+            <TVL data = {data}/>
         </div>
     )
 }
