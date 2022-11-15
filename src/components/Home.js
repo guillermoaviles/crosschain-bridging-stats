@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
@@ -40,67 +39,68 @@ const Home = ({data, setData}) => {
 
 
     return (
-        <div>
-            <p>Home</p>
-            <div>
-                <div className='source-chain' onClick={handleSourceChain}>
+        <div className='home'>
+            <div className='parameter-select-box'>
+                <div className='boxes' onClick={handleSourceChain}>
                     <p>Source Chain</p>
-                    <div value='ethereum'>Ethereum</div>
-                    <div value='polygon'>Polygon</div>
-                    <div value='binance'>BNB Chain</div>
-                    <div value='avalanche'>Avalanche</div>
-                    <div value='fantom'>Fantom</div>
-                    <div value='moonbeam'>Moonbeam</div>
-                    <div value='aurora'>Aurora</div>
-                    <div value='arbitrum'>Arbitrum</div>
-                    <div value='optimism'>Optimism</div>
-                    <div value='cosmoshub'>Cosmos</div>
-                    <div value='osmosis'>Osmosis</div>
+                    <div className='chain' value='ethereum'>Ethereum</div>
+                    <div className='chain' value='polygon'>Polygon</div>
+                    <div className='chain' value='binance'>BNB Chain</div>
+                    <div className='chain' value='avalanche'>Avalanche</div>
+                    <div className='chain' value='fantom'>Fantom</div>
+                    <div className='chain' value='moonbeam'>Moonbeam</div>
+                    <div className='chain' value='aurora'>Aurora</div>
+                    <div className='chain' value='arbitrum'>Arbitrum</div>
+                    <div className='chain' value='optimism'>Optimism</div>
+                    <div className='chain' value='cosmoshub'>Cosmos</div>
+                    <div className='chain' value='osmosis'>Osmosis</div>
                 </div>
-                <div className='destination-chain' onClick={handleDestinationChain}>
+                <div className='boxes' onClick={handleDestinationChain}>
                     <p>Destination Chain</p>
-                    <div value='ethereum'>Ethereum</div>
-                    <div value='polygon'>Polygon</div>
-                    <div value='binance'>BNB Chain</div>
-                    <div value='avalanche'>Avalanche</div>
-                    <div value='fantom'>Fantom</div>
-                    <div value='moonbeam'>Moonbeam</div>
-                    <div value='aurora'>Aurora</div>
-                    <div value='arbitrum'>Arbitrum</div>
-                    <div value='optimism'>Optimism</div>
-                    <div value='cosmoshub'>Cosmos</div>
-                    <div value='osmosis'>Osmosis</div>
+                    <div className='chain' value='ethereum'>Ethereum</div>
+                    <div className='chain' value='polygon'>Polygon</div>
+                    <div className='chain' value='binance'>BNB Chain</div>
+                    <div className='chain' value='avalanche'>Avalanche</div>
+                    <div className='chain' value='fantom'>Fantom</div>
+                    <div className='chain' value='moonbeam'>Moonbeam</div>
+                    <div className='chain' value='aurora'>Aurora</div>
+                    <div className='chain' value='arbitrum'>Arbitrum</div>
+                    <div className='chain' value='optimism'>Optimism</div>
+                    <div className='chain' value='cosmoshub'>Cosmos</div>
+                    <div className='chain' value='osmosis'>Osmosis</div>
                 </div>
-                <div className='asset' onClick={handleAsset}>
+                <div className='boxes' onClick={handleAsset}>
                     <p>Asset</p>
-                    <div value='uusdc'>USDC</div>
-                    <div value='uusdt'>USDT</div>
-                    <div value='dai-wei'>DAI</div>
-                    <div value='weth-wei'>ETH</div>
-                    <div value='steth-wei'>stETH</div>
-                    <div value='wbtc-satoshi'>WBTC</div>
-                    <div value='wbnb-wei'>BNB</div>
-                    <div value='wmatic-wei'>MATIC</div>
-                    <div value='wftm-wei'>FTM</div>
-                    <div value='uatom'>ATOM</div>
-                    <div value='wglmr-wei'>GLMR</div>
-                    <div value='link-wei'>LINK</div>
-                    <div value='aave-wei'>AAVE</div>
-                    <div value='ape-wei'>APE</div>
-                    <div value='uni-wei'>UNI</div>
+                    <div className='asset' value='uusdc'>USDC</div>
+                    <div className='asset' value='uusdt'>USDT</div>
+                    <div className='asset' value='dai-wei'>DAI</div>
+                    <div className='asset' value='weth-wei'>ETH</div>
+                    <div className='asset' value='steth-wei'>stETH</div>
+                    <div className='asset' value='wbtc-satoshi'>WBTC</div>
+                    <div className='asset' value='wbnb-wei'>BNB</div>
+                    <div className='asset' value='wmatic-wei'>MATIC</div>
+                    <div className='asset' value='wftm-wei'>FTM</div>
+                    <div className='asset' value='uatom'>ATOM</div>
+                    <div className='asset' value='wglmr-wei'>GLMR</div>
+                    <div className='asset' value='link-wei'>LINK</div>
+                    <div className='asset' value='aave-wei'>AAVE</div>
+                    <div className='asset' value='ape-wei'>APE</div>
+                    <div className='asset' value='uni-wei'>UNI</div>
                 </div>
-                <div>
-                    <label>From Date:</label>
-                    <input className='input' onChange={handleFromTime}/>
-                </div>
-                <div>
-                    <label>To Date:</label>
-                    <input className='input' onChange={handletoTime}/>
-                </div>
-                <Link to = '/stats'>
-                    <h1>Statistics</h1>
-                </Link>
             </div>
+            <div className='dates-box'>
+                <div className='input'>
+                    <label className='label'>From:</label>
+                    <input className='input-box' placeholder="mm/dd/yyyy" onChange={handleFromTime}/>
+                </div>
+                <div className='input'>
+                    <label className='label'>To:</label>
+                    <input className='input-box' placeholder="mm/dd/yyyy" onChange={handletoTime}/>
+                </div>
+            </div>
+            <Link to = '/stats'>
+                <h1 className='stats-button'>Get Stats</h1>
+            </Link>
         </div>
     )
 }

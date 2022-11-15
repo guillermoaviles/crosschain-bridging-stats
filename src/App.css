@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  color: #a7a8a9;
+  background: #191c1e;
 }
 
 .App-logo {
@@ -8,24 +10,142 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  img {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  background: #191c1e;
+  color: #a7a8a9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+nav img {
+  max-height: 50px;
+  padding: 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+nav h1 {
+  max-height: 50px;
+  color: #a7a8a9;
+  padding: 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+nav h1:hover {
+  color: #0abab5;
+}
+
+nav h2 {
+  max-height: 50px;
+  color: #a7a8a9;
+  padding: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #323438;
+  border-radius: 9.5px;
+}
+
+nav h2:hover {
+  color: #0abab5;
+}
+
+.home {
+  margin-top: 50px;
+}
+
+.parameter-select-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.boxes {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #323438;
+  width: 22%;
+  padding-bottom: 10px;
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.boxes p {
+  font-weight: bold;
+}
+
+.chain {
+  width: 65%;
+  margin: 3px;
+  padding: 1px;
+  background-color: #5b5d60;
+  border-radius: 9.5px;
+}
+
+.chain:hover {
+  color: #191c1e;
+  background-color: #0abab5;
+}
+
+.asset {
+  font-size: 11px; 
+  width: 65%;
+  margin: 2px;
+  padding: 1px;
+  background-color: #5b5d60;
+  border-radius: 7px;
+}
+
+.asset:hover {
+  color: #191c1e;
+  background-color: #0abab5;
+}
+
+div .dates-box {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dates-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 45px;
+  background-color: #323438;
+  width: 22%;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.input-box {
+  margin: 10px;
+  width: 80%;
+  height: 20px;
+  text-align: center;
+  border-radius: 7px;
+}
+
+.stats-button {
+  color: #191c1e;
+  background-color: #0abab5;
+  width: 22%;
+  border-radius: 9.5px;
+  padding: 5px;
+  margin-top: 45px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stats-button:link {
+  text-decoration: none;
 }
 
 @keyframes App-logo-spin {

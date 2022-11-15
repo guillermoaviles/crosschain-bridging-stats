@@ -52,7 +52,7 @@ const MainStats = ({data}) => {
                 stroke="#8884d8"
                 activeDot={{ r: 8 }}
             />
-            <Line type="monotone" dataKey="volume" stroke="#82ca9d" />
+            <Line type="monotone" dataKey="num_txs" stroke="#82ca9d" />
             </LineChart>
         </div>
     )
