@@ -4,13 +4,6 @@ import { Link } from "react-router-dom";
 
 const Home = ({data, setData}) => {
     
-    // const [data, setData] = useState({
-    //     sourceChain: '',
-    //     destinationChain: '',
-    //     asset: '',
-    //     fromTime: '',
-    //     toTime: ''
-    // });
 
     const handleSourceChain = (event) => {
         setData({...data,

@@ -1,6 +1,6 @@
 import MainStats from "./MainStats";
 import TimeSeries from "./TimeSeries";
-import TVL from "./TVL";
+import CumulativeVolume from "./CumulativeVolume.js";
 
 
 const Stats = ({data}) => {
@@ -8,7 +8,7 @@ const Stats = ({data}) => {
         <div>
             <MainStats data = {data}/>
             <TimeSeries data = {data}/>
-            <TVL data = {data}/>
+            <CumulativeVolume data = {data}/>
         </div>
     )
 }

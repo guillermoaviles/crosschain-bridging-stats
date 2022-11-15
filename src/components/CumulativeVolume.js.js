@@ -4,14 +4,14 @@ import axios from 'axios';
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from "recharts";
 
 
-const MainStats = ({data}) => {
+const CumulativeVolume = ({data}) => {
 
     const [stats, setStats] = useState({});
 
     useEffect(() => {
         console.log(data);
         if (data.sourceChain && data.destinationChain) {
-        axios.get(`https://api.axelarscan.io/cross-chain/transfers-chart?sourceChain=${data.sourceChain}&destinationChain=${data.destinationChain}&asset=${data.asset}&fromTime=${data.fromTime}&toTime=${data.toTime}`)
+        axios.get(`https://api.axelarscan.io/cross-chain/cumulative-volume?sourceChain=${data.sourceChain}&destinationChain=${data.destinationChain}&asset=${data.asset}&fromTime=${data.fromTime}&toTime=${data.toTime}`)
           .then((response) => response.data)
           .then((response) => {
             console.log(response);
@@ -29,7 +29,7 @@ const MainStats = ({data}) => {
 
     return (
         <div>
-            <h2>Transfers</h2>
+            <h2>Cumulative Volume</h2>
             <LineChart
                 width={500}
                 height={300}
@@ -58,4 +58,4 @@ const MainStats = ({data}) => {
     )
 }
 
-export default MainStats;
+export default CumulativeVolume;
