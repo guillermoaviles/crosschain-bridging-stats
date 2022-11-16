@@ -2,6 +2,7 @@
   text-align: center;
   color: #a7a8a9;
   background: #191c1e;
+  height: 100vh;
 }
 
 .App-logo {
@@ -172,4 +173,8 @@ div .dates-box {
   to {
     transform: rotate(360deg);
   }
+}
+
+#root {
+  height: 100vh;
 }
