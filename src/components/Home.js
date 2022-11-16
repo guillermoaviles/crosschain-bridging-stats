@@ -5,6 +5,9 @@ const Home = ({data, setData}) => {
     
 
     const handleSourceChain = (event) => {
+        // event.target.setAttribute({
+        //     'color': '#191c1e',
+        //     'background-color': '#0abab5'})
         setData({...data,
             sourceChain: event.target.getAttribute('value')
         })
