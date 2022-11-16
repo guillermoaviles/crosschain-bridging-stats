@@ -24,8 +24,10 @@ const MainStats = ({data}) => {
     return (
         <div>
             <h2>Main Stats</h2>
-            <div className='num-txs'>Number of Transfers: {Object.keys(stats).length ? stats.data[0].num_txs : ''}</div>
-            <div className='volume'>Volume: ${Object.keys(stats).length ? stats.data[0].volume : ''} USD</div>
+            <div className='main-stats-box'>
+                <div className='num-txs'>Number of Transfers: {Object.keys(stats).length ? stats.data[0].num_txs : ''}</div>
+                <div className='volume'>Volume: ${Object.keys(stats).length ? stats.data[0].volume : ''} USD</div>
+            </div>
         </div>
     )
 }
