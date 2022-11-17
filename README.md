@@ -44,13 +44,13 @@ Crosschain Bridge Stats lets users obtain information on crypto asset flows betw
 
 ## Time Frames
 
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Component Structure Design | H | 4hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Styling | H | 10hrs| 10hrs | 10hrs |
-| Core Logic | H | 10hrs| 12hrs | 12hrs |
-| Total | H | 27hrs| 28hrs | 28hrs |
+| Component | Priority | Estimated Time | Actual Time |
+| --- | :---: |  :---: | :---: |
+| Component Structure Design | H | 4hrs| 3.5hrs |
+| Working with API | H | 3hrs| 2.5hrs |
+| Styling | H | 10hrs| 10hrs |
+| Core Logic | H | 10hrs| 12hrs |
+| Total | H | 27hrs| 28hrs |
 
 ## Additional Libraries
  
