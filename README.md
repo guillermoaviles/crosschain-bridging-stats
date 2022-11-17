@@ -44,30 +44,58 @@ Crosschain Bridge Stats lets users obtain information on crypto asset flows betw
 
 ## Time Frames
 
-Time frames are also key in the development cycle.  You have limited time to code all phases of the project.  Your estimates can then be used to evaluate project possibilities based on time needed and the actual time you have before the project must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add an additional hour or two to each component to play it safe. 
-
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
+| Component Structure Design | H | 4hrs| 3.5hrs | 3.5hrs |
 | Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Styling | H | 10hrs| 10hrs | 10hrs |
+| Core Logic | H | 10hrs| 12hrs | 12hrs |
+| Total | H | 27hrs| 28hrs | 28hrs |
 
 ## Additional Libraries
- Use this section to list all supporting libraries and their role in the project such as Axios, ReactStrap, D3, Bootstrap, Tailwind CSS, etc. 
+ 
+ - Axios -> For getting data from the API.
+ - Vercel -> For deploying the app.
+ - Rechart -> For plotting visual charts from API time series data.
+ - React Router -> For enabling client-side routing.
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  Code snippet should not be greater than 10 lines of code. 
+An interesting piece of code that I used in my app was the LineChart element. Made by [Recharts](https://recharts.org/en-US); this library features composable charting for React components, allowing users to easily plot beautiful, interactive and easy to read charts.
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
+<div className='chart'>
+                <LineChart
+                    width={500}
+                    height={300}
+                    data={stats.data}
+                    margin={{
+                        top: 5,
+                        right: 30,
+                        left: 20,
+                        bottom: 5
+                    }}
+                >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="timestamp" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Line
+                    type="monotone"
+                    dataKey="time"
+                    stroke="#8884d8"
+                    activeDot={{ r: 8 }}
+                />
+                <Line type="monotone" dataKey="num_txs" stroke="#82ca9d" />
+                </LineChart>
 }
 ```
 
 ## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution.
 
-#### SAMPLE.....
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
+| Issue | Resolution | 
+| --- | :---: |  
+| Managing edge cases | It was difficult to come up with a way to mitigate edge cases encountered when a user inputs parameters for which there is no data. Even though the API accepts the parameters as correct, it would return an empty array. This led to the app breaking in those scenarios. I was able to solve it by writing an if statement just after the axios response in order to measure if the array had length. Depending on the result, it would either set state if the array had data or send an alert if the array was empty. | 
+| Buttons stay highlighted when clicked | Using onClick was not an option given that if a user clicked on another button on the same column, both would remain highlighted. I used conditional rendering to compare the user-set parameter state to the value of each button element. Which ever matched would render the styling for the clicked button. | 
+
