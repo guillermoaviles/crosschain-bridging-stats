@@ -12,34 +12,35 @@ Crosschain Bridge Stats lets users obtain information on crypto asset flows betw
 
 ## Wireframes & React Component Hierarchy
 
-- [wireframes]()
-- [react architecture]()
+- [wireframe](https://github.com/guillermoaviles/crosschain-bridging-stats/blob/MVP/design/Crosschain%20Bridge%20Stats%20Wireframe%201.png)
+- [wireframe](https://github.com/guillermoaviles/crosschain-bridging-stats/blob/MVP/design/Crosschain%20Bridge%20Stats%20Wireframe%202.png)
+- [react architecture](https://github.com/guillermoaviles/crosschain-bridging-stats/blob/MVP/design/React%20Component%20Hierarchy%20Diagram.png)
 
-Define the the React components and the architectural design of your app.
 
 ### MVP/PostMVP
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decide what is placed into your MVP as the "client" will expect this functionality to be implemented upon project completion.  
+#### MVP
+- Using external [API](https://docs.axelarscan.io/) to get bridge route data for a given token.
+- Rendering data obtained fromm API on page in text and chart form. 
+- Users are able to interact with the page by selecting the source and destination chains, asset and time range they wish to obtain information on.
 
-#### MVP EXAMPLE
-- Find and use external api 
-- Render data on page 
-- Allow user to interact with the page
+#### PostMVP
 
-#### PostMVP EXAMPLE
-
-- Add localStorage or firebase (or similar) for storage
+- Use multiple external APIs to aggregate date from a wider set of bridges and assets.
+- Provide additional resources, links and charts to give users a deeper insight into their research goals.
+- Extend list of parameters in order to provide more tailored data; such as getting bridge interaction history by wallet address, getting general data on a single bridge end, etc.
 
 ## Components
-##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
-
-Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components. 
 
 | Component | Description | 
 | --- | :---: |  
-| App | This will make the initial data pull and include React Router| 
-| Header | This will render the header, include the nav | 
-| Footer | This will render the footer, include links to github repo | 
+| App | This stores the initial parameters set by the user, passes it to other components and includes React Router| 
+| Header | This renders the header, includes the nav | 
+| Home | Contains the buttons and input logic and sets the state for the user inputted parameters. | 
+| Stats | Contains the MainStats, TimeSeries and CumulativeVolume components. | 
+| MainStats | Fetches API data for cumulative number of transactions and volume based on the parameters set by the user and renders the reults. |
+| TimeSeries | Fetches time series API data for cumulative number of transactions based on the parameters set by the user and renders the reults. |
+| MainStats | Fetches time series API data for cumulative volume based on the parameters set by the user and renders the reults. |
 
 ## Time Frames
 
