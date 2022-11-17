@@ -30,6 +30,7 @@ Crosschain Bridge Stats lets users obtain information on crypto asset flows betw
 - Use multiple external APIs to aggregate date from a wider set of bridges and assets.
 - Provide additional resources, links and charts to give users a deeper insight into their research goals.
 - Extend list of parameters in order to provide more tailored data; such as getting bridge interaction history by wallet address, getting general data on a single bridge end, etc.
+- Change time input to accept regular date format.
 
 ## Components
 
