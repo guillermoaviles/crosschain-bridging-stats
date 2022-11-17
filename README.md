@@ -9,11 +9,8 @@ Crosschain Bridge Stats lets users obtain information on crypto asset flows betw
 
 - [github repo](https://github.com/guillermoaviles/crosschain-bridging-stats)
 - [deployment](https://crosschain-bridging-stats.vercel.app/)
-- [demo recording]()
 
 ## Wireframes & React Component Hierarchy
-
-Upload images of wireframes and component hierarchy to cloudinary (or similar) and add the link here with a description of the specific wireframe.
 
 - [wireframes]()
 - [react architecture]()
