@@ -5,12 +5,6 @@ const Home = ({data, setData}) => {
     
 
     const handleSourceChain = (event) => {
-        
-        // if (data.sourceChain !== event.target.getAttribute('value')) {
-
-        // }
-        // event.target.style.color = '#191c1e';
-        // event.target.style.backgroundColor = '#0abab5';
         setData({...data,
             sourceChain: event.target.getAttribute('value')
         })
@@ -39,9 +33,6 @@ const Home = ({data, setData}) => {
             toTime: event.target.value
         })
     }
-
-    
-    console.log(data);
 
 
     return (

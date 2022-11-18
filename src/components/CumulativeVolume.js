@@ -9,23 +9,18 @@ const CumulativeVolume = ({data}) => {
     const [stats, setStats] = useState({});
 
     useEffect(() => {
-        console.log(data);
         if (data.sourceChain && data.destinationChain) {
         axios.get(`https://api.axelarscan.io/cross-chain/cumulative-volume?sourceChain=${data.sourceChain}&destinationChain=${data.destinationChain}&asset=${data.asset}&fromTime=${data.fromTime}&toTime=${data.toTime}`)
           .then((response) => response.data)
           .then((response) => {
-            console.log(response);
             response.data.forEach(element => {
-                console.log(element)
                 element.timestamp = new Date(element.timestamp).toLocaleDateString()              
             });
-            console.log(response.data);
             setStats(response) 
           })
         }
     }, []);
     
-    console.log(stats);
 
     return (
         <div>

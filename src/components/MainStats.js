@@ -9,7 +9,6 @@ const MainStats = ({data}) => {
     const [stats, setStats] = useState({});
 
     useEffect(() => {
-        console.log(data);
         if (data.sourceChain && data.destinationChain) {
         axios.get(`https://api.axelarscan.io/cross-chain/transfers-stats?sourceChain=${data.sourceChain}&destinationChain=${data.destinationChain}&asset=${data.asset}&fromTime=${data.fromTime}&toTime=${data.toTime}`)
           .then((response) => response.data)
@@ -22,8 +21,6 @@ const MainStats = ({data}) => {
           })
         }
     }, []);
-    
-    console.log(stats);
 
     return (
         <div>
