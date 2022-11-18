@@ -88,11 +88,11 @@ const Home = ({data, setData}) => {
             <div className='dates-box'>
                 <div className='input'>
                     <label className='label'>From:</label>
-                    <input className='input-box' placeholder="mm/dd/yyyy" onChange={handleFromTime}/>
+                    <input className='input-box' placeholder="Unix-timecode" onChange={handleFromTime}/>
                 </div>
                 <div className='input'>
                     <label className='label'>To:</label>
-                    <input className='input-box' placeholder="mm/dd/yyyy" onChange={handletoTime}/>
+                    <input className='input-box' placeholder="Unix-timecode" onChange={handletoTime}/>
                 </div>
             </div>
             <Link to = '/stats'>

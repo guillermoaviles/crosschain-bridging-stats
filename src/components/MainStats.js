@@ -13,11 +13,14 @@ const MainStats = ({data}) => {
         axios.get(`https://api.axelarscan.io/cross-chain/transfers-stats?sourceChain=${data.sourceChain}&destinationChain=${data.destinationChain}&asset=${data.asset}&fromTime=${data.fromTime}&toTime=${data.toTime}`)
           .then((response) => response.data)
           .then((response) => {
-            setStats(response) 
+            if (!response.data.length) {
+                alert('Data not available for set parameters.')
+            } else {
+                setStats(response)
+            } 
           })
         }
     }, []);
-    
 
     return (
         <div>
