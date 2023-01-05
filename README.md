@@ -5,6 +5,10 @@
 
 Crosschain Bridge Stats lets users obtain information on crypto asset flows between different blockchains. Users can retreive the information by selecting the Source and Destintion chains, the Asset and the time segment. Once the parameters have been set, the app returns three blocks of stats consisting of cumulative number of transfers, volume, a time series graph of transfers and a time series graph of volume for the specified time segment.
 
+![Screen Shot 2023-01-05 at 1 30 31 PM](https://user-images.githubusercontent.com/33820055/210854239-e7df2a86-895f-4311-b0fd-207f3580238e.png)
+
+
+
 ## Project Links
 
 - [github repo](https://github.com/guillermoaviles/crosschain-bridging-stats)
